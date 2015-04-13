@@ -1,0 +1,83 @@
+header {
+  background-color: $black;
+  border-bottom: 1px solid #2b2b2b;
+
+  > div {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0.111em 0;
+    h1, h2 {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 0;
+      img {
+        width: 187px;
+
+      }
+    }
+    nav {
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      @include box-sizing(border-box);
+      @include calc(width, '100% - 187px');
+      ul {
+
+        li {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 0.500em 0;
+
+          a {
+            text-decoration: none;
+            color: $white;
+            font-size: 0.667em;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 1em;
+            &:hover {
+              color: $brand1;
+            }
+          }
+
+          a.button {
+            font-size: 0.722em;
+          }
+        }
+
+        li:not(:last-child) {
+          margin-right: 1.3em;
+          letter-spacing: 0.05em;
+
+        }
+
+        li:last-child {
+          padding: 0;
+          a {
+            display: inline-block;
+            padding: 1.286em 2.143em 1em;
+            border-bottom: 4px solid $darkBrand1;
+            background-color: $brand1;
+            text-transform: uppercase;
+            color: $black;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            &:hover {
+              background-color: $lightBrand1;
+              color: $black;
+            }
+            &:active {
+              border: none;
+              margin-top: 4px;
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}
+.navButton{
+  display: none;
+}

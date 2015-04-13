@@ -1,0 +1,24 @@
+.merci{
+  padding: 7.222em 0;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  h1{
+    line-height: 1.2em;
+    margin-bottom: 0.6em;
+  }
+  >div{
+    margin-bottom: 2.778em;
+    line-height: 1.3em;
+  }
+  >.button{
+    margin-right: 1.667em;
+    min-width: 255px;
+    @include box-sizing(border-box);
+    margin-bottom: 2em;
+
+  }
+  >.button:last-child{
+    margin-right: 0;
+  }
+}

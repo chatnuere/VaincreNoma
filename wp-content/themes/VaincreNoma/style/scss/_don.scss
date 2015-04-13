@@ -1,0 +1,635 @@
+#photoHeader {
+  padding: 6.500em 0 6.500em;
+  background-size: cover;
+  background-position: center;
+  .wrapper {
+    max-width: 965px;
+    margin: 0 auto;
+    h1, h2 {
+      display: inline-block;
+      background-color: rgba(#000, 0.3);
+      font-size: 1.944em;
+      text-transform: none;
+      padding: 0.2em 0.457em;
+      color: $white;
+    }
+  }
+}
+
+.faireUnDon {
+  background-image: url("media/img/interface/bg-don.jpg");
+}
+
+#mfgWidget {
+  width: 100%;
+  height: 2000px;
+  overflow: scroll;
+  width: 1px;
+  min-width: 100%;
+  *width: 100%;
+}
+
+#presentationDon {
+  padding: 2.222em 0 0.3em;
+  .wrapper {
+    max-width: 46.333em;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      margin-bottom: 0.4em;
+    }
+    p:not(.half) {
+      font-size: 0.778em;
+      margin-bottom: 1.4em;
+    }
+    p.half {
+      color: $black;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 3em;
+      line-height: 1.3em;
+      .chiffres {
+        font-size: 1.667em;
+      }
+      .small {
+        font-size: 0.778em;
+      }
+      i {
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 51px;
+        margin-top: 5px;
+      }
+      .child {
+        width: 38px;
+        background-image: url("media/img/interface/child.jpg");
+
+      }
+      .village {
+        width: 181px;
+        background-image: url("media/img/interface/village.jpg");
+      }
+    }
+  }
+}
+
+#helloAssoForm {
+  max-width: 960px;
+  margin: 3em auto;
+  position: relative;
+
+  label {
+    cursor: pointer;
+  }
+  .main {
+    @include box-sizing(border-box);
+    padding-right: 340px;
+
+    h2 {
+      font-family: $sans-serif;
+      color: $brand1;
+      font-size: 1.5em;
+      font-weight: normal;
+      border-bottom: 1px solid $brand1;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+      margin-top: 1em;
+      text-transform: none;
+      letter-spacing: 0;
+
+    }
+
+    .tab {
+      margin-bottom: 20px;
+      .tabHeader {
+        label {
+          background-color: #f6F6F6;
+          color: #aaa;
+          display: inline-block;
+          vertical-align: top;
+          width: 49.5%;
+          margin-right: 1%;
+          @include border-radius(5px 5px 0 0);
+          cursor: pointer;
+          font-size: 25px;
+          letter-spacing: -1px;
+          padding: 0.5em 0.8em 0.4em;
+          @include box-sizing(border-box);
+          @include transition(background-color 0.3s ease-out);
+
+          input {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            opacity: 0;
+          }
+
+          &.active {
+            color: #666;
+            background-color: #efefef;
+            font-weight: 700;
+          }
+          &:not(.active):hover {
+            background-color: #DDD;
+            color: #aaa;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .tabContent {
+        background-color: #efefef;
+        padding: 1em 1.4em;
+        > p {
+          font-size: 0.850em;
+          margin-bottom: 1em;
+          color: #666;
+        }
+        > ul {
+          width: 95%;
+          min-height: 100px;
+          margin: auto;
+          margin-bottom: 30px;
+          position: relative;
+          &:not(.active) {
+            display: none;
+          }
+
+          li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            &:last-child {
+              margin: 0;
+            }
+
+            &:hover{
+              input:not(.active){
+                background-color: #DDD;
+              }
+            }
+            input, p {
+              margin: 0;
+              display: inline-block;
+              vertical-align: middle;
+              background: #fff;
+              border: 1px solid #DDD;
+            }
+            input {
+              width: 105px;
+              font-size: 32px;
+              cursor: pointer;
+              color: #666;
+              height: 53px;
+              vertical-align: middle;
+              margin-right: 5px;
+              text-align: center;
+              font-family: $chiffres;
+              &:hover {
+                background-color: #DDD;
+              }
+              &.active {
+                background-color: $brand1;
+                color: $white;
+              }
+            }
+            p {
+              font-size: 0.850em;
+              color: #888;
+              @include calc(width, '100% - 142px');
+              padding: 18px 0 18px 15px;
+
+            }
+          }
+        }
+      }
+    }
+
+    .once {
+      color: #666;
+      background-color: #efefef;
+      padding: 12px 0 12px 90px;
+      display: block;
+      cursor: pointer;
+      &:hover {
+        background-color: #DDD;
+      }
+      &.active {
+        background-color: $brand1;
+      }
+      p {
+        span, input {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        input {
+          width: 110px;
+          border: 1px solid #DDD;
+          margin-left: 15px;
+          color: #444;
+          font-family: Roboto;
+          font-size: 25px;
+          padding: 8px 10px 5px;
+          font-family: $chiffres;
+          outline: none;
+          text-align: center;
+        }
+      }
+    }
+
+  }
+  .fiscinfo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 290px;
+    background-color: #efefef;
+    padding: 20px;
+    @include box-sizing(border-box);
+    .fiscImg {
+      float: left;
+      width: 20px;
+      height: 90px;
+      background-image: url("media/img/interface/icon-fisc.png");
+      margin: -23px 15px 5px 0;
+    }
+    h3 {
+      font-family: $sans-serif;
+      font-size: 0.8em;
+      font-weight: 700;
+      color: #666;
+      margin-bottom: 0.3em;
+    }
+    > p {
+      color: $black;
+      font-size: 0.8em;
+      line-height: 1.3em;
+      margin-bottom: 1em;
+    }
+
+    #reducFisc {
+
+      p {
+        font-size: 1em;
+        color: #666;
+        font-weight: 700;
+        margin-bottom: 0.4em;
+
+      }
+      div {
+        margin-bottom: 0.4em;
+        input, span {
+          display: inline-block;
+          vertical-align: middle;
+
+        }
+        input {
+          border: 1px solid #fcc12d;
+          color: #fcc12d;
+          font-size: 20px;
+          padding: 5px;
+          width: 67px;
+          margin-right: 0.3em;
+          font-family: $chiffres;
+
+        }
+        span {
+          color: #fcc12d;
+          font-size: 1.5em;
+          font-family: $serif;
+        }
+      }
+    }
+  }
+
+  .input {
+    display: block;
+    margin-bottom: 1em;
+
+    .labelForm, input[type='text'], textarea {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    input[type='text'], textarea, #dueDate {
+      @include calc(width, '100% - 150px');
+      font-size: 0.9em;
+      padding: 0.7em;
+      color: #666666;
+      border: 1px solid #C0C0C0;
+      outline: none;
+      &.error {
+        border: 1px solid #E26A6A;
+      }
+      &::-webkit-input-placeholder {
+        color: #E26A6A;
+        opacity: 1;
+        font-style: italic;
+        font-weight: lighter;
+      }
+      &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #E26A6A;
+        opacity: 1;
+        font-style: italic;
+        font-weight: lighter;
+      }
+      &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #E26A6A;
+        opacity: 1;
+        font-style: italic;
+        font-weight: lighter;
+      }
+      &:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: #E26A6A;
+        font-style: italic;
+        font-weight: lighter;
+      }
+    }
+    textarea {
+      resize: none;
+      min-height: 7em;
+    }
+    .labelForm {
+      width: 135px;
+      text-align: right;
+      margin: 5px 10px 0 0;
+      font-size: 0.9em;
+      .facultative {
+        opacity: 0.5;
+        font-size: 0.7em;
+        display: inline-block;
+        margin-right: 8px;
+
+      }
+
+    }
+    .labelForm.nomargintop {
+      margin: 0 10px 0 0;
+    }
+
+    label {
+      cursor: pointer;
+      width: 28%;
+      display: inline-block;
+      .radio, span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .radio {
+        width: 14px;
+        height: 14px;
+        border: 1px solid #a9a9a9;
+        @include border-radius(50%);
+        position: relative;
+        margin-right: 0.4em;
+
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 1%;
+          height: 1%;
+          display: inline-block;
+          background-color: $brand1;
+          @include border-radius(50%);
+          opacity: 0;
+          border: 3px solid $white;
+          @include box-sizing(border-box);
+          @include transform(translateX(-50%) translateY(-50%));
+          @include transition(all 0.2s ease-out);
+
+        }
+
+      }
+      span:not(.radio) {
+        font-size: 0.8em;
+      }
+      input[type="radio"] {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+      input[type="radio"]:checked + .radio {
+        span {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+
+          @include transform(translateX(-50%) translateY(-50%));
+        }
+      }
+    }
+  }
+
+  .checkbox {
+    display: block;
+    margin-top: 1.5em;
+    input {
+        display: inline-block;
+      width: 0px;
+      height: 0px;
+      opacity: 0;
+    }
+
+    input[type='checkbox']:checked + .check {
+      border-color: $brand1;
+      span{
+        top: -3px;
+        left: -4px;
+        opacity: 1;
+        @include transform(rotate(0deg));
+      }
+    }
+
+    .check, p {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .check {
+      width: 14px;
+      height: 14px;
+      border: 1px solid #a9a9a9;
+      position: relative;
+      margin-right: 10px;
+      span{
+        position: absolute;
+        top: -12px;
+        left: 3px;
+        @include transform(rotate(45deg));
+        @include transition(all 0.3s ease-out);
+        opacity: 0;
+        color: $brand1;
+      }
+    }
+    p {
+      @include calc(width , '100% - 45px');
+    }
+  }
+
+  .checkbox.nomargintop{
+    margin-top: 0;
+  }
+
+  .tip{
+    text-align: center;
+    margin-top: 2em;
+    .rangeslider, .rangeslider__fill{
+      max-width: 400px;
+    }
+    .rangeslider__fill{
+      background-color: $brand1;
+    }
+    .rangeslider, label{
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 2em;
+    }
+
+
+
+    .theTip{
+      font-weight: 800;
+      font-family: $chiffres;
+      width: 60px;
+      text-align: right;
+      padding: 5px 5px 2px 5px;
+      margin: 0 5px 4px 30px;
+      font-size: 0.8em;
+    }
+  }
+
+  .helloAssoP, .cgu{
+    font-size: 0.85em;
+    line-height: 1.3em;
+
+    a{
+      color: $brand1;
+      &:hover{
+        color : $lightBrand1;
+      }
+    }
+  }
+
+  .recap{
+    font-size: 0.8em;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 0.5em;
+    .label , .value{
+      display: inline-block;
+      vertical-align: middle;
+      width: 50%;
+    }
+    .label{
+    text-align: left;
+    }
+    .value{
+     text-align: right;
+    }
+  }
+
+  .total{
+    text-align: center;
+    h3, div{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0.5em;
+    }
+
+    #totalAmount{
+      text-align: center;
+      border: none;
+      background-color: #fcc12d;
+      color: $white;
+      font-family: "Gotham-Bold",sans-serif;
+      font-size: 2.5em;
+      padding: 0.25em 0.25em 0.05em;
+
+    }
+  }
+
+  .recurrent{
+    display: none;
+    .one{
+      margin-bottom:  1em;
+       #dueDate {
+        font-size: 0.9em;
+        padding: 0.7em;
+        color: #666666;
+        border: 1px solid #C0C0C0;
+        outline: none;
+        text-align: center;
+        &.error {
+          border: 1px solid #E26A6A;
+        }
+        &::-webkit-input-placeholder {
+          color: #E26A6A;
+          opacity: 1;
+          font-style: italic;
+          font-weight: lighter;
+        }
+        &:-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+          color: #E26A6A;
+          opacity: 1;
+          font-style: italic;
+          font-weight: lighter;
+        }
+        &::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+          color: #E26A6A;
+          opacity: 1;
+          font-style: italic;
+          font-weight: lighter;
+        }
+        &:-ms-input-placeholder {
+          /* Internet Explorer 10+ */
+          color: #E26A6A;
+          font-style: italic;
+          font-weight: lighter;
+        }
+      }
+      .spanError{
+        font-size: 0.8em;
+        font-style: italic;
+        color: #E26A6A;
+        &:before{
+          content: (' ( ');
+        }
+        &:after{
+          content: (' ) ');
+        }
+      }
+    }
+    .caution{
+      color: $brand1;
+    }
+    &.active{
+      display: block;
+    }
+  }
+  .cgu{
+    margin-bottom: 1.5em;
+    text-align: left;
+  }
+  .submit{
+    text-align: center;
+    .button.small{
+      padding: 0.786em 1.543em 0.5em;
+      font-size: 1.6em;
+    }
+  }
+  .emailErrorMsg{
+    margin: 0.5em  0 1em 150px;
+    font-style: italic;
+    color: #E26A6A;
+  }
+
+
+
+
+}

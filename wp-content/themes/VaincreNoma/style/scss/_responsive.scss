@@ -1,0 +1,595 @@
+@media screen and (max-width: 81.250em) {
+
+  #mainInformations .wrapper .map img {
+    width: 100%;
+  }
+  #mainInformations .wrapper .map p {
+    margin-left: 0;
+  }
+
+  #mainInformations .wrapper .map h3 {
+    margin-left: 0;
+  }
+  #mainInformations .wrapper .theNoma {
+    margin: 0 auto 2em;
+  }
+  #mainInformations .wrapper .general {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 64.625em) {
+  #mainInformations .wrapper > div, #mainInformations .wrapper .general {
+    margin-bottom: 2em;
+  }
+  #mainInformations .wrapper > div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 62.500em) {
+
+  #videoMap .styledSlider {
+    max-width: 22.611em;
+  }
+
+}
+
+@media screen and (max-width:60.000em) {
+  #helloAssoForm .fiscinfo {
+    position: initial;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #helloAssoForm .main {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+
+  }
+  #helloAssoForm .submit {
+    margin-bottom:  2em;
+  }
+
+}
+
+@media screen and (max-width: 56.250em) {
+
+  #child .wrapper video {
+    width: 100%;
+  }
+
+  #videoMap .styledSlider {
+    max-width: 20.611em;
+  }
+
+}
+
+
+
+@media screen and (max-width: 50.000em) {
+
+  html,body {
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-size: 16px;
+  }
+
+  /*
+  Menu
+  */
+
+  div h1, header > div {
+    position: relative;
+    padding: 0;
+  }
+
+  div h1, header > div h2 {
+    display: block;
+  }
+
+  .navButton {
+    display: block;
+    width: 62px;
+    height: 62px;
+    top: 0;
+    right: 0;
+    background-color: $brand1;
+    position: absolute;
+    span {
+      @include transition(all 0.3s ease-out);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      @include transform(translateX(-50%) translateY(-50%));
+      width: 50%;
+      height: 4px;
+      background-color: black;
+      &:before, &:after {
+        content: '';
+        display: block;
+        background-color: #000000;
+        width: 100%;
+        height: 4px;
+        left: 0;
+        position: absolute;
+        @include transition(all 0.3s ease-out);
+      }
+      &:after {
+        top: -8px;
+      }
+      &:before {
+        top: 8px;
+      }
+    }
+  }
+  .navButton.active {
+    span {
+      background-color: rgba(#000, 0);
+
+      &:before {
+        @include transform(rotate(-45deg));
+        top: 0;
+      }
+      &:after {
+        @include transform(rotate(45deg));
+        top: 0;
+      }
+    }
+  }
+
+  header > div nav {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    background-color: #000;
+    width: 100%;
+
+    @include transition(right 0.3s ease-out);
+    right: -100%;
+    ul {
+      margin: 2em 0;
+
+      li {
+        width: 80%;
+        text-align: left;
+        border-bottom: 1px solid $white;
+      }
+      li:first-child {
+        border-top: 1px solid $white;
+      }
+      li:last-child {
+        margin-top: 1em;
+        border-bottom: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  header > div nav.expanded {
+    right: 0;
+  }
+  header > div nav ul li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  /*
+  Fin Menu
+  */
+
+  /*
+   footer
+  */
+  footer .footerWrapper {
+    padding-top: 0;
+  }
+  footer .footerWrapper > div:first-child {
+    display: none;
+  }
+
+  footer .footerWrapper > div:nth-child(2) {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    ul {
+      width: 100%;
+    }
+  }
+  footer .footerWrapper > div:nth-child(2) ul li:last-child {
+    border-bottom: 1px solid #4d4d4d;
+  }
+
+  footer .footerWrapper > div:last-child {
+    padding-top: 1.3em;
+    text-align: center;
+  }
+
+  /*
+  Fin footer
+  */
+
+  /*
+   encart enfant home
+  */
+  #child .wrapper {
+    text-align: center;
+    padding: 2em 1em 1.778em;
+  }
+
+  #child .wrapper .first, #child .wrapper .last {
+    position: initial;
+    width: 90%;
+    margin: 0 auto;
+    display: inline;
+    font-size: 1em;
+    p {
+      display: inline;
+      strong {
+        font-size: 2em;
+      }
+    }
+  }
+
+  #child .wrapper .last p:before {
+    content: '';
+  }
+
+  #child .wrapper video, #child .wrapper .styledSlider {
+    display: none;
+  }
+
+  #child .wrapper > p {
+    padding-top: 22em;
+    margin-top: 2em;
+    background-image: url("media/img/content/child.jpg");
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /*
+  Fin encart enfant home
+  */
+
+  /*
+     encart mainInformations
+  */
+
+  #mainInformations > div {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  /*
+   Fin encart mainInformations
+  */
+
+  #shemas {
+    display: none;
+  }
+
+  #homeCatchPhrase {
+    margin: 0;
+    p {
+      font-size: 1.3em;
+      width: 90%;
+      margin: 0 auto;
+      br {
+        display: none;
+      }
+    }
+  }
+
+  /*
+     encart notre action
+  */
+  #ourAction div:first-child {
+    text-align: center;
+  }
+
+  #ourAction div:first-child h3, #ourAction div:first-child p, #ourAction div:first-child ul {
+    text-align: left;
+  }
+
+  #ourAction img {
+    width: 100%;
+    max-width: 450px;
+
+  }
+
+  #ourAction div:nth-child(2) {
+    padding-top: 0;
+    margin: 0;
+    p:first-child {
+      margin-bottom: 25px;
+    }
+  }
+
+  /*
+      Fin encart notre action
+  */
+
+  /*
+     encart notre videoMap
+  */
+  #videoMap {
+    background-color: $black;
+    padding: 2em 0;
+  }
+  #videoMap #MapChildrens, #videoMap h2, #videoMap .left, #videoMap .right, #videoMap .styledSlider, #videoMap .catchPhrase {
+    display: none;
+  }
+  #videoMap .button {
+    font-size: 1em;
+  }
+  /*
+   encart notre videoMap
+*/
+
+  /*
+   encart étapes
+*/
+  #evolution ul li {
+    text-align: center;
+  }
+  #evolution ul li .img {
+    display: none;
+  }
+
+  #evolution ul li .description {
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+    width: 90%;
+    max-width: 550px;
+  }
+  #evolution ul li .description .wrapper {
+    text-align: left;
+    padding: 1.5em 0;
+  }
+  #evolution ul li .description .wrapper i {
+    width: 90px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  /*
+   Fin encart étapes
+  */
+
+  #laMaladie img {
+    width: 50% !important;
+    height: auto !important;
+    min-width: 240px;
+  }
+  #laMaladie div {
+    text-align: center;
+  }
+
+  /*  qui sommes nous nav **/
+
+  #quiSommesNousNav ul {
+    width: 100%;
+  }
+  #quiSommesNousNav ul li {
+    display: block;
+    border: 0;
+    border-bottom: 1px solid #d5d8db;
+  }
+  #quiSommesNousNav ul li a {
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+  }
+  #quiSommesNousNav ul li a i {
+    display: none;
+  }
+
+  /* photo header*/
+
+  #photoHeader {
+    padding: 6.500em 0 0.500em;
+    text-align: center;
+  }
+
+  #photoHeader .wrapper h1, #photoHeader .wrapper h2 {
+    font-size: 1.5em;
+  }
+
+  /* qui sommes nous*/
+
+  #associationGeneral {
+    padding: 0 0 2.778em;
+    width: 100%;
+  }
+  #associationGeneral .visual {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  #associationGeneral .visual img:first-child {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  #associationGeneral .visual img:last-child {
+    display: none;
+  }
+
+  #associationGeneral .text {
+    margin: 0 auto;
+    display: block;
+  }
+
+  #associationGeneral .text h3, #assiciationTeam .administration h3, #assiciationTeam .experts h3 {
+    font-size: 1.4em;
+  }
+  #assiciationTeam .administration h3 span, #assiciationTeam .experts h3 span {
+    font-size: 0.733em;
+  }
+  #assiciationTeam .administration, #assiciationTeam .experts {
+    display: block;
+    margin: 0 auto;
+  }
+  #assiciationTeam .experts {
+    margin: 2em auto 0;
+    max-width: 20.000em;
+  }
+  #parrains figure {
+    margin: 0;
+  }
+  #parrains figure img {
+    width: 8.5em;
+    height: 8.5em;
+    margin: 0 auto 0.667em;
+  }
+
+  #parrains figure figcaption {
+    width: 90%;
+    margin: 0 auto 1.5em;
+  }
+
+  #partners .linkToPartner a {
+    margin: 0 1.944em;
+    width: 50%;
+    margin: 0 auto 1.944em;
+    display: block;
+    text-align: center;
+    img {
+      width: 100%;
+      max-width: 100px;
+    }
+  }
+
+  #nosObjectifs ul li {
+    margin: 0 0.833em 2em;
+  }
+
+  #nosObjectifs ul li i {
+    background-size: contain;
+  }
+
+  #programm .theProgram h3, #programm .nexStep h3 {
+    font-size: 1.5em;
+  }
+
+  #mediaImg h3 {
+    margin-bottom: 0.5em;
+  }
+
+  #mediaImg ul li {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto 1em !important;
+  }
+
+  nav.archive, .articleContainer > div:first-child {
+    display: none;
+  }
+
+  .article {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .article article .content .text p {
+    font-size: 1.2em;
+  }
+
+  .article h1 {
+    font-size: 1.544em;
+  }
+
+  div.archive {
+    display: block;
+    margin-top: 2em;
+    width: 100%;
+    float: none;
+  }
+
+  #archiveCarousel .owl-carousel {
+    display: none !important;
+  }
+  #archiveCarousel .mobileLink {
+    display: block;
+  }
+  #archiveCarousel {
+    width: 100%;
+    max-width: 50em;
+    padding: 2.778em 0 0;
+  }
+  #archiveCarousel h3 {
+    text-align: center;
+  }
+
+  body.page-template-template-faire-un-don-php{
+
+
+    #mfgWidget{
+      height:3180px;
+    }
+
+  }
+}
+
+@media screen and (max-width:40.625em) {
+  #helloAssoForm .main .tab .tabHeader label {
+    font-size: 0.9em;
+    padding: 2em 1em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  #helloAssoForm .input .labelForm {
+    width: 102px;
+  }
+
+  #helloAssoForm .input label {
+    width: 26%;
+    text-align: center;
+  }
+
+
+}
+
+
+@media screen and (max-width: 37.500em) {
+
+  #evolution ul li .description .wrapper {
+    text-align: center;
+    padding: 3em 0;
+  }
+  #evolution ul li .description .wrapper i {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  #evolution ul li .description .wrapper div {
+    text-align: center;
+  }
+  #evolution ul li .description .wrapper i {
+    width: 100%;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.7em;
+    letter-spacing: 0;
+  }
+
+}
+
+@media screen and (max-width: 31.250em) {
+
+  #mainInformations .general {
+    margin: 0 0 1em;
+  }
+
+}
+
